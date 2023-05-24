@@ -6,7 +6,7 @@ name: Session 2 SaaS Bootcamp 2020
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch.
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
  
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -14,17 +14,11 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   build:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node: [ 14, 16, 18, 20 ]
-    name: Node ${{ matrix.node }} sample
     steps:
       - uses: actions/checkout@v3
-      - name: Setup node
-        uses: actions/setup-node@v3
+      - uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node }}
+          node-version: 18
 # You may pin to the exact commit or the version.
 # uses: Borales/actions-yarn@97ba8bebfe5b549bb7999261698a52a81fd62f1b
         uses: Borales/actions-yarn@v4.2.0
