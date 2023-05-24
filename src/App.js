@@ -11,11 +11,11 @@ function App() {
         </p>
         <a
           className="App-link"
-          href="https://google.com"
+          href="https://bing.com"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Go to Google!
+          Go Bing!
         </a>
       </header>
     </div>
